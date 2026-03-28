@@ -73,7 +73,6 @@ var_lab <- var_lab[!duplicated(var_lab$id),]
 table(var_list$var %in% var_lab$var);table(var_lab$var %in% var_list$var) 
 
 var_list <- merge(var_list,var_lab, all.x = TRUE, by = 'var')
-#openxlsx::write.xlsx(var_list, 'var_list.xlsx')
 
 rm(files_f,var_lab,files)
 openxlsx::write.xlsx(var_list,"01.var_list.xlsx")
